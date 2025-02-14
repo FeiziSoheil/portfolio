@@ -56,16 +56,16 @@ function Footer() {
 
   return (
     <motion.footer
-      className="relative overflow-hidden text-gray-300"
+      className="relative overflow-hidden 2xs:border-t-0 sm:pt-12 2xs:pt-44 sm:border-t  border-white/10 text-gray-300"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       {/* Gradient Background */}
-      <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#090912] via-[#090911] to-[#090911]"></div>
+      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-[#0b0d12] via-[#0b0d12] to-[#0b0d12]"></div>
 
       {/* Main Footer Content */}
-      <motion.div className="relative container mx-auto px-4 py-8">
+      <motion.div className="relative sm:container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <motion.div
@@ -196,7 +196,7 @@ function Footer() {
       {/* Blur Effect (Chess-like) at Bottom */}
       <div
         aria-hidden="true"
-        className="-z-10 absolute top-20 left-[calc(50%-4rem)] transform-gpu blur-3xl"
+        className="-z-10 absolute 2xs:top-0 md:top-40  left-[calc(50%-4rem)] transform-gpu blur-3xl"
       >
         <div
           className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#7cc8ff] to-[#181130] opacity-20"

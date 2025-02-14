@@ -7,7 +7,7 @@ const CobeGlobe = dynamic(() => import("../components/CobeGlobe"), {
 
 function Grid() {
   return (
-    <section className="bg-gradient-to-b from-[#090911] via-[#090912] to-[#090912] pt-20 sm:pt-32 md:py-36">
+    <section className="bg-gradient-to-b from-[#0b0d12] via-[#0b0d12] to-[#0b0d12] pt-20 sm:pt-32 md:py-36">
       <div className="max-w-7xl mx-auto px-4 flex flex-col gap-3 sm:gap-5">
         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl animate-fade-in">
           Overview
@@ -60,37 +60,37 @@ function Grid() {
               </div>
 
               <div className="absolute 2xs:bottom-14 2xs:space-x-3">
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in ">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in ">
                   React.js
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   Tailwind
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   Next.js
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   Python
                 </span>
               </div>
 
               <div className="absolute 2xs:bottom-0 2xs:space-x-3">
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   React.js
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   Tailwind
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   Next.js
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in">
                   Python
                 </span>
-                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#0e0e1d] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
+                <span className="2xs:px-4 2xs:py-3 2xs:text-lg bg-[#141423] text-white/50 rounded-lg  hover:bg-[#161629] hover:text-white transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"></span>
               </div>
             </div>
           </div>

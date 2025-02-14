@@ -18,7 +18,7 @@ interface ExperienceCardProps {
 
 export function Experience() {
   return (
-    <div className="bg-gradient-to-b from-[#090911] via-25% to-[#121624] px-4 sm:p-12 lg:pt-20 lg:px-8">
+    <div className="bg-gradient-to-b from-[#121624] via-25% to-[#0b0d12] px-4 sm:p-12 lg:pt-20 lg:px-8">
       <TracingBeam>
         <h2 className="text-4xl font-bold xs:ml-12 md:ml-auto mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Experience

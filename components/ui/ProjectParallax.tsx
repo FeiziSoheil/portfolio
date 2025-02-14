@@ -57,7 +57,7 @@ export const ProjectParallax = ({
   return (
     <div
       ref={ref}
-      className="bg-gradient-to-b from-[#090912] to-[#090911] 2xs:h-[210vh] md:h-[240vh] pt-36 pb-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="bg-gradient-to-b from-[#0b0d12] to-[#0b0d12] 2xs:h-[210vh] md:h-[240vh] pt-36 pb-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div

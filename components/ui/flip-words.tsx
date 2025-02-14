@@ -36,7 +36,7 @@ export const FlipWords = ({
       <motion.div
         initial={{
           opacity: 0,
-          y: -50,
+          y: -20,
         }}
         animate={{
           opacity: 1,
@@ -44,7 +44,7 @@ export const FlipWords = ({
         }}
         exit={{
           opacity: 0,
-          y: 50,
+          y: 20,
           transition: {
             duration: 0.5,
           }
@@ -56,7 +56,7 @@ export const FlipWords = ({
           duration: 0.8
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
+          "z-10 inline-block  relative text-center text-neutral-900 dark:text-neutral-100 px-2",
           className
         )}
         key={currentWord}

@@ -27,7 +27,6 @@ export default function Home() {
    <Projects/>
     <Experience/>
       <Feedback/>
-    <CanvasRevealEffectDemo/>
     
     </section>
   );

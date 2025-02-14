@@ -19,12 +19,12 @@ const InfiniteMovingCards = ({ items, speed = 20 }: InfiniteMovingCardsProps) =>
   const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="relative   w-full bg-[#121624] overflow-hidden md:h-[30rem] xs:h-96 ">
+    <div className="relative   w-full   to-[#0b0d12] overflow-hidden md:h-[30rem] xs:h-96 ">
       {/* Left shadow overlay */}
-      <div className="absolute left-0 top-0 bottom-0 w-32 h-full z-10 bg-gradient-to-r from-[#121624]  via-[#121624d7]    to-transparent" />
+      <div className="absolute left-0 top-0 bottom-0 w-32 h-full z-10 bg-gradient-to-r from-[#0b0d12]  via-[#0b0d12b4]    to-transparent" />
       
       {/* Right shadow overlay */}
-      <div className="absolute right-0 top-0 bottom-0 w-32 h-full z-10 bg-gradient-to-l from-[#121624] via-[#121624d7] to-transparent" />
+      <div className="absolute right-0 top-0 bottom-0 w-32 h-full z-10 bg-gradient-to-l from-[#0b0d12] via-[#0b0d12b4] to-transparent" />
       
       {/* Cards container */}
       <div className="absolute top-0 bottom-0 items-center flex animate-infinite-scroll group">

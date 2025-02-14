@@ -7,7 +7,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 export function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="bg-gradient-to-b from-[#121624] via-80% to-[#090912] min-h-screen">
+      <div className="bg-gradient-to-b from-[#121624] via-80% to-[#0b0d12] min-h-screen">
         <div className="py-12 md:py-20 w-full mx-auto container px-4 md:px-8">
           <div className="text-center mb-12 md:mb-24">
             <h2 className="text-3xl md:text-5xl text-white font-black">

@@ -67,7 +67,7 @@ const ProjectCard = React.memo<ProjectCardProps>(({ project, className = '' }) =
   <div className={`group relative h-full min-h-[250px] md:min-h-[280px] transform perspective-1000 ${className}`}>
     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.07] to-transparent rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out" />
     
-    <div className="relative h-full rounded-xl md:rounded-2xl border border-white/20 overflow-hidden transition-all duration-700 ease-in-out transform group-hover:border-white/40 group-hover:shadow-[0_0_2rem_-0.5rem_#dab2ff]">
+    <div className="relative h-full rounded-xl md:rounded-2xl border border-white/20 overflow-hidden transition-all duration-700 ease-in-out transform group-hover:border-white/40 ">
       <div className="absolute inset-0 transition-all duration-700 ease-in-out group-hover:scale-[1.02]">
         <Image
           src='/image/bg.png'
@@ -80,7 +80,7 @@ const ProjectCard = React.memo<ProjectCardProps>(({ project, className = '' }) =
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] transition-all duration-700 ease-in-out group-hover:backdrop-blur-[1px] group-hover:bg-black/30" />
       </div>
 
-      <div className="relative h-full p-4 md:p-6 flex flex-col bg-gradient-to-t from-black/80 via-black/50 to-transparent">
+      <div className="relative h-full p-4 md:p-6 flex flex-col bg-gradient-to-t from-[#121624] via-[#0c0e16] to-transparent">
         <div className="flex-1">
           <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transform transition-all duration-700 ease-in-out group-hover:text-[#dab2ff] group-hover:translate-y-[-2px]">
             {project.title}
@@ -140,8 +140,8 @@ function Projects() {
   ], []);
 
   return (
-    <section className="bg-[#090912] w-full py-16 md:py-20 lg:py-28">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="bg-gradient-to-b from-[#0b0d12] to-[#121624] 2xs:pb-44 sm:pb-0 w-full py-16 md:py-20 lg:py-28">
+      <div className="sm:container mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-black">
             Last <span className="bg-[#1e1b35] px-2 md:px-3 rounded-lg md:rounded-xl text-[#dab2ff]">Works</span>
@@ -151,7 +151,7 @@ function Projects() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 [&>*:last-child]:sm:col-span-2 [&>*:last-child]:lg:col-span-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 2xs:gap-y-8 lg:grid-cols-3 gap-4 md:gap-6 [&>*:last-child]:sm:col-span-2 [&>*:last-child]:lg:col-span-1">
           {projects.map((project, index) => (
             <ProjectCard 
               key={project.id} 

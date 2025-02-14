@@ -3,7 +3,7 @@ import React from "react";
 
 function page() {
   return (
-    <section>
+    <section className=" bg-[#0b0d12]">
       <div className="container text-white mx-auto pt-32 border-b pb-20 border-white/20">
         <h2 className="text-4xl font-bold mb-5">who am i</h2>
        <span className="space-y-5">

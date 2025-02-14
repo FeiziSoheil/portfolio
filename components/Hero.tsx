@@ -85,20 +85,8 @@ function Hero() {
         </svg>
         <rect fill="url(#a)" width="100%" height="100%"></rect>
       </svg>
-      <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#090911] via-[#090911] to-[#090911]"></div>
+      <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#0b0d12] via-[#0b0d12] to-[#0b0d12]"></div>
 
-      <div
-        aria-hidden="true"
-        className="-z-10 absolute top-10 left-[calc(50%-4rem)] transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:top-[calc(50%-30rem)] lg:left-48 xl:left-[calc(50%-24rem)]"
-      >
-        <div
-          className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#7cc8ff] to-[#181130] opacity-20"
-          style={{
-            clipPath:
-              "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-          }}
-        ></div>
-      </div>
       <Spotlight />
       <motion.div
         className="absolute flex flex-col justify-center items-center w-full h-full px-4 py-8"
@@ -112,26 +100,28 @@ function Hero() {
             as="button"
             className="dark:bg-black py-2 sm:py-2.5 md:py-3 px-4 sm:px-4.5 md:px-5 bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <motion.span
+            <motion.a
+              href="/path/to/your/cv.pdf"
+              download
               className="text-base sm:text-lg md:text-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Download CV
-            </motion.span>
+            </motion.a>
           </HoverBorderGradient>
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[8rem] xl:text-[11rem] font-bold text-white text-center"
+          className="text-[2.5rem] 2xs:text-[3.8rem] md:text-[5rem] lg:text-[8rem] xl:text-[11rem] font-bold text-white text-center"
         >
           Soheil Feizi
         </motion.h1>
 
         <motion.h2
           variants={itemVariants}
-          className="-mt-2 sm:-mt-4 md:-mt-6 lg:-mt-12 xl:-mt-16 text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[5rem] xl:text-[7rem] text-center font-bold text-white flex flex-wrap justify-center items-center"
+          className="-mt-2 2xs:text-[2.4rem] sm:-mt-4 md:-mt-6 lg:-mt-12 xl:-mt-16 text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[5rem] 2xs:mb-2 xl:text-[7rem] flex justify-center text-center  font-bold text-white    items-center"
         >
           <FlipWords
             words={words}
@@ -151,7 +141,7 @@ function Hero() {
                     ease: "easeInOut",
                   },
                 }}
-                className="text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[5rem] xl:text-[6rem] text-[#dab2ff]"
+                className="text-[1.5rem] 2xs:text-[2.4rem] sm:text-[2rem] md:text-[3rem] lg:text-[5rem] xl:text-[6rem] text-[#dab2ff]"
                 transition={{
                   duration: 0.3,
                   ease: "easeOut",
@@ -171,6 +161,7 @@ function Hero() {
           applications using Next.js. Always eager to learn and explore new
           technologies.
         </motion.p>
+        
       </motion.div>
     </motion.div>
   );

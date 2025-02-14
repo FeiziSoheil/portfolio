@@ -70,9 +70,9 @@ const TechSkillsScroller: React.FC = () => {
         {/* Scroller */}
         <div className="relative overflow-hidden w-full">
           {/* Left shadow overlay */}
-          <div className="absolute top-0 left-0 h-full w-52 pointer-events-none z-10 bg-gradient-to-r from-[#090912] via-[#090912ce] to-transparent"></div>
+          <div className="absolute top-0 left-0 h-full w-52 pointer-events-none z-10 bg-gradient-to-r from-[#0b0d12] via-[#0b0d12ce] to-transparent"></div>
           {/* Right shadow overlay */}
-          <div className="absolute top-0 right-0 h-full w-52 pointer-events-none z-10 bg-gradient-to-l from-[#090912] via-[#090912ce] to-transparent"></div>
+          <div className="absolute top-0 right-0 h-full w-52 pointer-events-none z-10 bg-gradient-to-l from-[#0b0d12] via-[#0b0d12ce] to-transparent"></div>
           <div className="inline-flex animate-scroll relative z-0">
             {techSkills.concat(techSkills).map((tech, index) => (
               <div
