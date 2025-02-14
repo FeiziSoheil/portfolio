@@ -1,0 +1,11 @@
+@import "tailwindcss";
+body{
+  background-color: #090912;
+}
+@theme {
+    --breakpoint-xs: 30rem;
+    --breakpoint-2xs: 18rem;
+    --breakpoint-5xl: 64rem;
+    --breakpoint-6xl: 72rem;
+
+  }
