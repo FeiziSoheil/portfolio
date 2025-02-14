@@ -102,11 +102,15 @@ const NavBar: React.FC = () => {
   return (
     <nav className="w-full flex justify-center border-white/20">
       <div
+      
         className={`${
           scrollyValue > 0 ? "-translate-y-72" : "translate-y-0"
-        } duration-500 w-full fixed bg-secondary_bg_color/90 backdrop-blur-md border-b border-white/20 z-10`}
+        } duration-500  w-full fixed  border-b border-white/20 z-10`}
       >
-        <div className="container mx-auto p-3 flex flex-col md:flex-row md:items-center justify-between text-white">
+        <div 
+          style={{backdropFilter:'blur(10px)'}}
+        
+        className="sm:container mx-auto p-3 flex flex-col  md:flex-row md:items-center justify-between text-white">
           <div className="flex items-center h-max justify-between">
             <Link 
               href={"/"}
@@ -158,12 +162,13 @@ const NavBar: React.FC = () => {
         {/* mobile menu */}
         <div
           ref={mobileMenuRef1}
+          style={{backdropFilter:'blur(10px)'}}
           className={`${
-            isClicked1 ? "h-max py-4" : "h-0 py-0 overflow-hidden"
-          } bg-secondary_bg_color/90 backdrop-blur-md border text-white border-white/20 absolute w-full left-0 duration-300 ease-in-out md:hidden`}
+            isClicked1 ? "h-max py-4  " : "h-0 py-0 overflow-hidden"
+          }  border  text-white  backdrop-blur-2xl z-50 border-white/20 absolute w-full left-0 duration-300 ease-in-out md:hidden`}
         >
-          <div className="container mx-auto">
-            <ul className="mb-0 flex flex-col items-start px-4 space-y-2">
+          <div className="sm:container   mx-auto">
+            <ul className="mb-0  flex flex-col items-start px-4 space-y-2">
               {navigation.map((navLink, index) => (
                 <li key={index} className="w-full">
                   <MobileNavLink href={navLink.href}>{navLink.name}</MobileNavLink>

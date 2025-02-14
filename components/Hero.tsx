@@ -62,7 +62,7 @@ function Hero() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative w-full min-h-[100svh] overflow-hidden"
+      className="relative w-full 2xs:h-[60svh] md:h-[100svh] overflow-hidden"
     >
       <svg
         aria-hidden="true"
@@ -94,7 +94,7 @@ function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <motion.div variants={itemVariants} className="mb-8 sm:mb-10 md:mb-8">
+        <motion.div variants={itemVariants} className="mb-8 z-0 sm:mb-10 md:mb-8">
           <HoverBorderGradient
             containerClassName="rounded-full cursor-pointer -mb-6 sm:-mb-8 md:-mb-12"
             as="button"

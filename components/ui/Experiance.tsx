@@ -3,7 +3,7 @@ import React from "react";
 import { TracingBeam } from "./tracing-beam";
 import { motion } from "framer-motion";
 
-// تعریف اینترفیس برای آیتم‌های تجربه
+
 interface ExperienceItem {
   title: string;
   date: string;
@@ -11,7 +11,7 @@ interface ExperienceItem {
   badge: string[];
 }
 
-// تعریف اینترفیس برای پراپس کامپوننت کارت تجربه
+
 interface ExperienceCardProps {
   item: ExperienceItem;
 }
