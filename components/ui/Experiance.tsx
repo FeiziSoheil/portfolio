@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TracingBeam } from "./tracing-beam";
 import { motion } from "framer-motion";
-
 
 interface ExperienceItem {
   title: string;
@@ -11,24 +10,54 @@ interface ExperienceItem {
   badge: string[];
 }
 
-
 interface ExperienceCardProps {
   item: ExperienceItem;
 }
 
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [matches, query]);
+
+  return matches;
+};
+
 export function Experience() {
+  const isLargerThanMd = useMediaQuery("(min-width: 768px)");
+
+  const Content = () => (
+    <div className="space-y-6">
+      {dummyContent.map((item, index) => (
+        <ExperienceCard key={index} item={item} />
+      ))}
+    </div>
+  );
+
   return (
-    <div className="bg-gradient-to-b from-[#121624] via-25% to-[#0b0d12] px-4 sm:p-12 lg:pt-20 lg:px-8">
-      <TracingBeam>
-        <h2 className="text-4xl font-bold xs:ml-12 md:ml-auto mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+    <div className="bg-gradient-to-b from-[#121624] to-[#0b0d12] px-4 sm:px-8 lg:pt-20 lg:px-12 py-12">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Experience
         </h2>
-        <div className="space-y-8">
-          {dummyContent.map((item, index) => (
-            <ExperienceCard key={index} item={item} />
-          ))}
-        </div>
-      </TracingBeam>
+        <p className="text-lg md:text-xl text-center text-gray-300 mb-12">
+          Dive into my journey—explore the diverse projects and roles that have shaped my career.
+        </p>
+        {isLargerThanMd ? (
+          <TracingBeam>
+            <Content />
+          </TracingBeam>
+        ) : (
+          <Content />
+        )}
+      </div>
     </div>
   );
 }
@@ -49,24 +78,18 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ item }) => {
     hidden: {
       opacity: 0,
       y: 20,
-      transition: {
-        type: "spring",
-        damping: 12,
-      },
+      transition: { type: "spring", damping: 12 },
     },
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: "spring",
-        damping: 12,
-      },
+      transition: { type: "spring", damping: 12 },
     },
   };
 
   return (
     <div className="relative border border-gray-700 rounded-xl p-6 transition-colors duration-300 hover:bg-gray-800/30">
-      <div className="absolute -left-3 h-full top-0 w-1 bg-gradient-to-b from-purple-500 to-[#121623] rounded-full" />
+      <div className="absolute -left-3 top-0 h-full w-1 bg-purple-500 rounded-full" />
 
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
@@ -125,11 +148,7 @@ const dummyContent: ExperienceItem[] = [
     date: "Jun 2024-Present",
     description: (
       <p className="text-gray-300">
-        As a Python educator at an academy, I have taught more than 100 students.
-        Through the use of varied and imaginative teaching techniques, I have
-        successfully simplified intricate Python ideas for students below the age
-        of 15. This method has allowed my students to swiftly grasp programming
-        skills and implement them effectively.
+        As a Python educator at an academy, I've taught over 100 students using creative and clear teaching methods that simplify intricate concepts.
       </p>
     ),
     badge: [
@@ -150,11 +169,7 @@ const dummyContent: ExperienceItem[] = [
     date: "Aug 2024-Present",
     description: (
       <p className="text-gray-300">
-        In addition to teaching Python, I have also instructed JavaScript. By
-        implementing numerous creative projects, students have been able to
-        complete their assigned tasks with creativity and skill. This educational
-        approach has not only enhanced their programming skills but has also
-        significantly improved their problem-solving abilities and creativity.
+        Alongside Python, I’ve led engaging JavaScript sessions where students develop creative projects that boost problem-solving and innovative thinking.
       </p>
     ),
     badge: [
@@ -172,10 +187,7 @@ const dummyContent: ExperienceItem[] = [
     date: "Jan 2024-Dec 2024",
     description: (
       <p className="text-gray-300">
-        As a React developer at iPara Company, I have successfully completed numerous
-        projects in various fields. These efforts have led to high customer satisfaction.
-        By leveraging my specialized skills and creativity, I have been able to provide
-        efficient and effective solutions, completing projects in the best possible way.
+        At iPara Company, I crafted multiple React projects, ensuring high customer satisfaction by delivering efficient, scalable, and user-friendly solutions.
       </p>
     ),
     badge: [

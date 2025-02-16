@@ -15,11 +15,11 @@ interface InfiniteMovingCardsProps {
 }
 
 const InfiniteMovingCards = ({ items, speed = 20 }: InfiniteMovingCardsProps) => {
-  // Duplicate items to create a smoother infinite effect
+ 
   const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="relative   w-full   to-[#0b0d12] overflow-hidden md:h-[30rem] xs:h-96 ">
+    <div className="relative   w-full   to-[#0b0d12] overflow-hidden md:h-[30rem] 2xs:h-[25rem] ">
       {/* Left shadow overlay */}
       <div className="absolute left-0 top-0 bottom-0 w-32 h-full z-10 bg-gradient-to-r from-[#0b0d12]  via-[#0b0d12b4]    to-transparent" />
       

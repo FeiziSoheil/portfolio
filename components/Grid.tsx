@@ -38,10 +38,10 @@ function Grid() {
                 height={1000}
                 markers={[
                   { location: [35.6892, 51.389], size: 0.05 },
-                  { location: [52.52, 13.405], size: 0.05 },
+                  
                 ]}
-                baseColor={[0.3, 0.3, 0.9]}
-                glowColor={[0.1, 0.1, 0.4]}
+                baseColor={[0.3, 0.5, 0.9]}
+                glowColor={[0.1, 0.1, 0.2]}
                 markerColor={[0.9, 0.3, 0.3]}
                 rotationSpeed={0.009}
                 mapBrightness={6}

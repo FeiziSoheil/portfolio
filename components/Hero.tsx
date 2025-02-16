@@ -62,7 +62,7 @@ function Hero() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative w-full 2xs:h-[60svh] md:h-[100svh] overflow-hidden"
+      className="relative w-full 2xs:h-[70svh] md:h-[100svh] overflow-hidden"
     >
       <svg
         aria-hidden="true"

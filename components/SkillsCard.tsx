@@ -55,7 +55,7 @@ const TechSkillsScroller: React.FC = () => {
           content="Infinite moving cards showcasing tech icons with hover effects using Tailwind CSS and React Icons"
         />
       </Head>
-      <div className="py-14 pb-44">
+      <div className="py-14 lg:pb-44">
         {/* Title and Description */}
         <div className="container mx-auto  text-white py-10">
         <h2 className="text-4xl font-bold">

@@ -121,7 +121,7 @@ function Projects() {
       title: "Admin Panel",
       description: "A comprehensive admin dashboard with user management, analytics, and reporting features.",
       technologies: tech.slice(0, 4),
-      previewLink: "#"
+      previewLink: "https://feizisoheil.github.io/admin-panel/"
     },
     {
       id: 2,
@@ -140,7 +140,7 @@ function Projects() {
   ], []);
 
   return (
-    <section className="bg-gradient-to-b from-[#0b0d12] to-[#121624] 2xs:pb-44 sm:pb-0 w-full py-16 md:py-20 lg:py-28">
+    <section className="bg-gradient-to-b from-[#0b0d12] to-[#121624] 2xs:pb-44 w-full py-16 md:py-20 lg:py-28">
       <div className="sm:container mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-black">

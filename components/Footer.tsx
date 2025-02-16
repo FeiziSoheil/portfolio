@@ -56,7 +56,7 @@ function Footer() {
 
   return (
     <motion.footer
-      className="relative overflow-hidden 2xs:border-t-0 sm:pt-12 2xs:pt-44 sm:border-t  border-white/10 text-gray-300"
+      className="relative overflow-hidden 2xs:border-t-0 sm:pt-12  sm:border-t  border-white/10 text-gray-300"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
