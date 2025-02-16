@@ -26,6 +26,8 @@ const NavBar: React.FC = () => {
 
   const mobileMenuRef1 = useRef<HTMLDivElement>(null);
   const mobileMenuRef2 = useRef<HTMLDivElement>(null);
+  const toggleButtonRef1 = useRef<HTMLButtonElement>(null);
+  const toggleButtonRef2 = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setActiveLink(pathname);
@@ -37,16 +39,15 @@ const NavBar: React.FC = () => {
     };
 
     const clickOutsideHandler = (event: MouseEvent): void => {
-      if (
-        mobileMenuRef1.current &&
-        !mobileMenuRef1.current.contains(event.target as Node)
-      ) {
+      const isOutsideMenu1 = mobileMenuRef1.current && !mobileMenuRef1.current.contains(event.target as Node);
+      const isOutsideButton1 = toggleButtonRef1.current && !toggleButtonRef1.current.contains(event.target as Node);
+      const isOutsideMenu2 = mobileMenuRef2.current && !mobileMenuRef2.current.contains(event.target as Node);
+      const isOutsideButton2 = toggleButtonRef2.current && !toggleButtonRef2.current.contains(event.target as Node);
+
+      if (isOutsideMenu1 && isOutsideButton1) {
         setIsClicked1(false);
       }
-      if (
-        mobileMenuRef2.current &&
-        !mobileMenuRef2.current.contains(event.target as Node)
-      ) {
+      if (isOutsideMenu2 && isOutsideButton2) {
         setIsClicked2(false);
       }
     };
@@ -59,6 +60,16 @@ const NavBar: React.FC = () => {
       document.removeEventListener("mousedown", clickOutsideHandler);
     };
   }, []);
+
+  const handleToggleMenu1 = () => {
+    setIsClicked1(!isClicked1);
+    setIsClicked2(false); // Close the other menu when opening this one
+  };
+
+  const handleToggleMenu2 = () => {
+    setIsClicked2(!isClicked2);
+    setIsClicked1(false); // Close the other menu when opening this one
+  };
 
   const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
     const isActive = href === activeLink;
@@ -102,15 +113,14 @@ const NavBar: React.FC = () => {
   return (
     <nav className="w-full flex justify-center border-white/20">
       <div
-      
         className={`${
           scrollyValue > 0 ? "-translate-y-72" : "translate-y-0"
         } duration-500  w-full fixed  border-b border-white/20 z-10`}
       >
         <div 
           style={{backdropFilter:'blur(10px)'}}
-        
-        className="sm:container mx-auto p-3 flex flex-col  md:flex-row md:items-center justify-between text-white">
+          className="sm:container mx-auto p-3 flex flex-col  md:flex-row md:items-center justify-between text-white"
+        >
           <div className="flex items-center h-max justify-between">
             <Link 
               href={"/"}
@@ -127,7 +137,8 @@ const NavBar: React.FC = () => {
               ))}
             </ul>
             <button
-              onClick={() => setIsClicked1(!isClicked1)}
+              ref={toggleButtonRef1}
+              onClick={handleToggleMenu1}
               className="md:hidden hover:bg-white/10 p-2 rounded-full transition-colors duration-300"
             >
               <svg
@@ -167,8 +178,8 @@ const NavBar: React.FC = () => {
             isClicked1 ? "h-max py-4  " : "h-0 py-0 overflow-hidden"
           }  border  text-white  backdrop-blur-2xl z-50 border-white/20 absolute w-full left-0 duration-300 ease-in-out md:hidden`}
         >
-          <div className="sm:container   mx-auto">
-            <ul className="mb-0  flex flex-col items-start px-4 space-y-2">
+          <div className="sm:container mx-auto">
+            <ul className="mb-0 flex flex-col items-start px-4 space-y-2">
               {navigation.map((navLink, index) => (
                 <li key={index} className="w-full">
                   <MobileNavLink href={navLink.href}>{navLink.name}</MobileNavLink>
@@ -183,7 +194,8 @@ const NavBar: React.FC = () => {
       <div
         className={`${
           scrollyValue > 0 ? "translate-y-7" : "-translate-y-72"
-        } duration-500 fixed w-full z-40`}>
+        } duration-500 fixed w-full z-40`}
+      >
         <div className="container mx-auto flex justify-center">
           <div className="backdrop-blur-lg flex justify-between bg-black/50 border text-white border-white/20 p-3 px-8 rounded-full 2xs:w-[40vw] md:w-max lg:w-max z-10 flex-col md:flex-row md:items-center hover:bg-black/60 transition-colors duration-300">
             <div className="flex items-center h-max justify-between">
@@ -202,7 +214,8 @@ const NavBar: React.FC = () => {
                 ))}
               </ul>
               <button
-                onClick={() => setIsClicked2(!isClicked2)}
+                ref={toggleButtonRef2}
+                onClick={handleToggleMenu2}
                 className="md:hidden hover:bg-white/10 p-2 rounded-full transition-colors duration-300"
               >
                 <svg
